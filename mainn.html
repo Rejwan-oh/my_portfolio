@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* General Page Style */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px 0;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            color: #00c6ff;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px #00c6ff;
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #00c6ff;
+            transition: 0.4s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: #00c6ff;
+        }
+
+        /* Profile Section */
+        .profile {
+            text-align: center;
+            margin-top: 40px;
+            animation: fadeIn 1.8s ease-in-out;
+        }
+
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #00c6ff;
+            box-shadow: 0 0 20px #00c6ff;
+            transition: transform 0.5s, box-shadow 0.5s;
+        }
+
+        .profile img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 40px #00c6ff;
+        }
+
+        .profile h2 {
+            margin-top: 15px;
+            font-size: 1.5em;
+            color: #00c6ff;
+        }
+
+        /* Main Section */
+        main {
+            flex: 1;
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+            font-size: 1.1em;
+            line-height: 1.7;
+            animation: fadeInUp 1.5s ease-in-out;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 198, 255, 0.2);
+        }
+
+        /* Scroll Animation */
+        .hidden {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease-out;
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-top: 2px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9em;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        footer a {
+            color: #00c6ff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+
+        footer a:hover {
+            text-shadow: 0 0 10px #00c6ff;
+            transform: scale(1.1);
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.2);
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to My Personal Portfolio Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Profile Section -->
+    <section class="profile" id="home">
+        <img src="canva-ginger-cat-with-paws-raised-in-air-MAGoQJ8-1Kc.jpg" alt="Profile Photo">
+        <h2>Rejwan — Web Developer</h2>
+    </section>
+
+    <main id="about" class="hidden">
+        <p>Hello! I’m Rejwan — a passionate web developer dedicated to building modern, responsive, and user-friendly websites. I love transforming ideas into interactive digital experiences using HTML, CSS, and JavaScript. Constantly exploring new technologies, I strive to refine my skills and create clean, efficient, and visually appealing web solutions that truly meet user and client needs.</p>
+    </main>
+
+    <footer id="contact" class="hidden">
+        <p>You can find me on</p>
+
+        <a href="https://www.facebook.com/md.rejwan.3701/" target="_blank">Facebook</a>
+        <a href="https://www.linkedin.com/in/md-rejwan-7a0483324/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/Rejwan-oh" target="_blank">GitHub</a>
+
+        <hr>
+        <p>Copyright © 2024 Rejwan. All rights reserved.</p>
+    </footer>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        const hiddenElements = document.querySelectorAll('.hidden');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        });
+        hiddenElements.forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
